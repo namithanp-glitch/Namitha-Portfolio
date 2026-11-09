@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Namitha NP | Frontend Developer &amp; UI/UX Designer</title>
+  <meta name="title" content="Namitha NP | Frontend Developer &amp; UI/UX Designer">
+  <meta name="description" content="Personal portfolio of Namitha NP. B.E. Computer Science and Engineering undergraduate, Frontend Developer, and UI/UX Designer crafting luxury digital web experiences.">
+  <meta name="author" content="Namitha NP">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#08080D">
+
+  <!-- Open Graph / Facebook / LinkedIn Social Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Namitha NP | Frontend Developer &amp; UI/UX Designer">
+  <meta property="og:description" content="Personal portfolio of Namitha NP. B.E. Computer Science &amp; Engineering undergraduate crafting high-performance, accessible, and luxury digital interfaces.">
+  <meta property="og:image" content="assets/images/namitha-profile.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Namitha NP | Frontend Developer &amp; UI/UX Designer">
+  <meta name="twitter:description" content="Personal portfolio of Namitha NP. B.E. Computer Science &amp; Engineering undergraduate crafting high-performance, accessible, and luxury digital interfaces.">
+  <meta name="twitter:image" content="assets/images/namitha-profile.jpg">
+
+  <!-- Preconnect to Google Fonts for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accessible Skip to Content Link -->
+  <a href="#hero" class="skip-to-content">Skip to main content</a>
+
+  <!-- Scroll Progress Indicator (Top of viewport) -->
+  <div class="scroll-progress-bar" id="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Luxury Monogram Preloader -->
+  <div id="preloader" class="luxury-preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-monogram-wrap">
+        <svg class="preloader-logo" viewBox="0 0 64 64" width="60" height="60" aria-hidden="true">
+          <defs>
+            <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8B5CF6"/>
+              <stop offset="100%" stop-color="#3B82F6"/>
+            </linearGradient>
+            <filter id="preloaderGlow">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <g fill="none" stroke="url(#preloaderGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#preloaderGlow)">
+            <path d="M18 44 V20 L30 44 V20" />
+            <path d="M38 44 V20 H45 C49 20 52 23 52 27 C52 31 49 34 45 34 H38" />
+          </g>
+          <circle cx="50" cy="18" r="2.5" fill="#C4B5FD" />
+        </svg>
+        <div class="preloader-orbit-ring" aria-hidden="true"></div>
+      </div>
+      <span class="preloader-name">NAMITHA NP</span>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambient Interactive Canvas (Background 3D / Particles) -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Custom Animated Cursor Elements (Desktop Only) -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="nav-brand" aria-label="Namitha NP Portfolio Home">
+        <span>Namitha NP</span>
+        <span class="brand-dot" aria-hidden="true"></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Actions (Theme Switch + Resume + Mobile Toggle) -->
+      <div class="nav-actions">
+        <!-- Theme Switcher Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark and Light theme" title="Toggle Theme">
+          <!-- Moon Icon (Dark Mode) -->
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Light Mode) -->
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Download Resume Button (Quick Action) -->
+        <a href="assets/resume/Namitha_NP_Resume.pdf" class="btn-nav-resume" download="Namitha_NP_Resume.pdf" aria-label="Download Namitha NP Resume PDF">
+          <span>Resume</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         STAGE 3: HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Ambient Lighting Auras -->
+      <div class="hero-glow-1" aria-hidden="true"></div>
+      <div class="hero-glow-2" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <!-- Hero Introduction Content (Left) -->
+        <div class="hero-content">
+          <!-- Availability Status Pill -->
+          <div class="hero-badge">
+            <span class="badge-status-dot" aria-hidden="true"></span>
+            <span>Available for Opportunities &amp; Internships</span>
+          </div>
+
+          <p class="hero-greeting">Welcome to my portfolio</p>
+          
+          <h1 class="hero-name">
+            Hi, I'm <span class="name-gradient">Namitha NP</span>
+          </h1>
+
+          <div class="hero-title-container">
+            <span class="hero-static-title">Frontend Developer &amp;</span>
+            <span class="hero-typing-wrap">
+              <span class="typing-text" id="typing-text">UI/UX Designer</span>
+              <span class="typing-cursor" aria-hidden="true"></span>
+            </span>
+          </div>
+
+          <p class="hero-bio">
+            B.E. Computer Science and Engineering undergraduate passionate about engineering high-performance web applications and sculpting pixel-perfect user interfaces. Committed to writing clean code, building accessible digital experiences, and continuously expanding my technical repertoire.
+          </p>
+
+          <!-- Call to Action Group -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-primary">
+              <span>View My Work</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="assets/resume/Namitha_NP_Resume.pdf" class="btn-secondary" download="Namitha_NP_Resume.pdf">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+
+            <a href="#contact" class="btn-ghost">
+              <span>Contact Me &rarr;</span>
+            </a>
+          </div>
+
+          <!-- Social / Professional Connect Links -->
+          <div class="hero-socials">
+            <span class="hero-socials-label">Connect:</span>
+            
+            <a href="https://github.com/namithanp-glitch" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile" title="GitHub Profile">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/namitha-n-p-130068391?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+
+            <a href="mailto:namithanp36@gmail.com" class="social-icon-link" aria-label="Email Namitha NP" title="Email Namitha">
+              <svg viewBox="0 0 24 24">
+                <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l9.518 7.714 9.518-7.714v11.817h-19.036z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Portrait Visual (Right) -->
+        <div class="hero-visual">
+          <!-- Floating Stat Badge 1: Education -->
+          <div class="floating-stat-badge badge-pos-1">
+            <div class="stat-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="stat-text">
+              <h4>B.E. CSE</h4>
+              <p>Undergraduate</p>
+            </div>
+          </div>
+
+          <!-- Profile Image Container with Glow Frame -->
+          <div class="hero-image-wrapper">
+            <div class="hero-image-container">
+              <img 
+                src="assets/images/namitha-profile.jpg" 
+                alt="Namitha NP – Frontend Developer and UI/UX Designer"
+                class="hero-profile-img"
+                id="hero-profile-image"
+                width="440"
+                height="550"
+                loading="eager"
+              >
+            </div>
+          </div>
+
+          <!-- Floating Stat Badge 2: Tech Focus -->
+          <div class="floating-stat-badge badge-pos-2">
+            <div class="stat-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="stat-text">
+              <h4>Creative UI/UX</h4>
+              <p>&amp; Modern Frontend</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         STAGE 4: ABOUT ME SECTION
+         ====================================================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <span class="section-tag">
+            <span class="brand-dot" aria-hidden="true"></span>
+            01 // About Me
+          </span>
+          <h2 class="section-title">
+            Bridging Logic &amp; <span class="gradient-text">Visual Craft</span>
+          </h2>
+          <p class="section-subtitle">
+            A glimpse into my computer science background, design sensitivity, and continuous learning journey.
+          </p>
+        </div>
+
+        <!-- Editorial About Grid -->
+        <div class="about-grid">
+          <!-- Left Column: Narrative & Background -->
+          <div class="about-narrative reveal">
+            <div class="about-story-card">
+              <h3 class="about-heading">
+                Hello, I'm <span class="text-highlight">Namitha</span>.
+              </h3>
+              
+              <p class="about-paragraph">
+                I am an undergraduate student pursuing my <strong>Bachelor of Engineering in Computer Science and Engineering</strong>. My enthusiasm lies at the vibrant intersection where structural algorithmic thinking meets aesthetic user interface design.
+              </p>
+
+              <p class="about-paragraph">
+                My journey began with curiosity about how complex software can feel effortless to the end user. That led me to dive deeply into <strong>Frontend Development</strong>—turning raw ideas into responsive, accessible code—and <strong>UI/UX Design</strong>, where empathy, visual hierarchy, and intuitive flows dictate every design decision.
+              </p>
+
+              <!-- Luxury Quote / Philosophy Box -->
+              <div class="about-quote-box">
+                <svg class="quote-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                  <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                </svg>
+                <p class="quote-text">
+                  "Great digital experiences are born when rigorous computational logic is dressed in purposeful, human-centered design."
+                </p>
+              </div>
+
+              <!-- Editable Personal Milestones / Goals Note -->
+              <div class="about-customization-note">
+                <div class="note-header">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <span>Career Aspirations</span>
+                </div>
+                <p>
+                  Actively preparing for engineering internships and collaborative frontend opportunities. Passionate about contributing to design systems, web performance, and modern JavaScript architectures.
+                </p>
+              </div>
+            </div>
+
+            <!-- Quick Details Strip -->
+            <div class="about-quick-specs">
+              <div class="spec-item">
+                <span class="spec-label">Degree</span>
+                <span class="spec-value">B.E. Computer Science</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Focus</span>
+                <span class="spec-value">Frontend &amp; UI/UX</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Location</span>
+                <span class="spec-value">[City : Chennai]</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Availability</span>
+                <span class="spec-value text-accent">Internships &amp; Roles</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 4 Editorial Pillars -->
+          <div class="about-pillars reveal">
+            <!-- Pillar 1 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4 class="pillar-title">Computer Science Rigor</h4>
+                <p class="pillar-desc">
+                  Solid understanding of data structures, algorithms, object-oriented concepts, and problem-solving through Python, Java, C, and C++.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4 class="pillar-title">Frontend Craftsmanship</h4>
+                <p class="pillar-desc">
+                  Building responsive layouts with semantic HTML5, modern CSS3 (Flexbox, Grid, custom properties), and vanilla JavaScript logic.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  <path d="M2 2l7.586 7.586"></path>
+                  <circle cx="11" cy="11" r="2"></circle>
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4 class="pillar-title">UI/UX Design Empathy</h4>
+                <p class="pillar-desc">
+                  Translating user needs into sleek visual wireframes, thoughtful color harmonies, clear typography scales, and Canva collateral.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4 class="pillar-title">Eagerness to Learn</h4>
+                <p class="pillar-desc">
+                  A high-growth mindset dedicated to embracing emerging web technologies, best coding standards, and industry design frameworks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         STAGE 4: SKILLS SECTION
+         ====================================================================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <span class="section-tag">
+            <span class="brand-dot" aria-hidden="true"></span>
+            02 // Capabilities
+          </span>
+          <h2 class="section-title">
+            Technical Arsenal &amp; <span class="gradient-text">Design Toolkit</span>
+          </h2>
+          <p class="section-subtitle">
+            Categorized skills honed through academic coursework, independent study, and hands-on coding practice.
+          </p>
+        </div>
+
+        <!-- 3 Animated Skill Categories -->
+        <div class="skills-grid">
+          
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category-card reveal" data-tilt>
+            <div class="category-header">
+              <div class="category-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Programming</h3>
+                <p class="category-desc">Core algorithmic languages</p>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <!-- Python -->
+              <div class="skill-item">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.006 2.752h5.814v.825H3.9S0 5.76 0 11.884c0 6.126 3.4 5.925 3.4 5.925h2.03v-2.85s-.11-3.4 3.344-3.4h5.757v-.855h.068s3.23.05 3.23-3.15V2.656S18.3 0 11.914 0zm-3.32 1.637c.563 0 1.02.457 1.02 1.02s-.457 1.02-1.02 1.02c-.564 0-1.02-.457-1.02-1.02s.456-1.02 1.02-1.02zm3.492 6.557h5.813s3.9.473 3.9-5.65c0-6.126-3.4-5.926-3.4-5.926h-2.03v2.85s.11 3.4-3.344 3.4H6.702v.855h-.068s-3.23-.05-3.23 3.15v5.474s-.477 2.656 5.908 2.656l.006-2.752H3.504v-.825h8.582zm3.32 14.168c-.563 0-1.02-.457-1.02-1.02s.457-1.02 1.02-1.02c.564 0 1.02.457 1.02 1.02s-.456 1.02-1.02 1.02z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-badge">Core Logic</span>
+                  </div>
+                  <span class="skill-focus">Algorithmic Problem Solving &amp; Scripting</span>
+                </div>
+              </div>
+
+              <!-- Java -->
+              <div class="skill-item">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.851 18.56s-.917.534.667.701c2.193.23 3.864.218 6.643-.284 0 0 .95.556 1.838.835-5.074 1.706-11.385.253-9.148-1.252zm-.51-3.66s-1.018.667.502.868c2.455.325 4.795.344 8.784-.366 0 0 .673.473 1.455.733-5.945 1.722-13.064.442-10.741-1.235zm7.391 1.794s-.913.628-.504.839c1.603.827 3.655.857 5.257.07 0 0-.256-.475-.724-.627-.923.361-2.427.348-4.029-.282zm-4.32-9.743c.963 1.103-1.07 2.651-1.07 2.651s3.14-1.637 1.734-3.666c-1.378-1.987-2.604-3.031.782-5.936-3.84 2.808-2.673 5.568-1.446 6.951zm7.33 7.842c.877-.852 1.341-1.745 1.341-2.736 0-.348-.057-.687-.168-1.011-.278-.813-.85-1.464-1.656-1.884-.395-.206-.826-.339-1.282-.395-.145-.018-.291-.027-.438-.027-.859 0-1.673.308-2.316.877-.074.066-.145.136-.211.21-.073.082-.14.168-.201.259-.06.09-.115.184-.163.282-.119.242-.182.502-.182.77 0 .524.237 1.016.65 1.349.414.333.957.489 1.49.428.188-.022.372-.073.548-.152.348-.157.625-.417.781-.734.053-.108.089-.224.107-.344.018-.12.016-.242-.006-.362-.023-.12-.069-.234-.136-.336-.067-.101-.154-.188-.256-.256-.205-.137-.451-.21-.703-.21-.362 0-.705.151-.944.415-.24.264-.352.616-.309.967.043.351.233.662.523.856.29.194.646.264.978.192.332-.072.617-.267.783-.537.083-.135.132-.288.143-.446.011-.158-.016-.316-.079-.462-.063-.146-.16-.272-.282-.369-.122-.097-.266-.161-.419-.187-.306-.052-.619.043-.84.256-.221.213-.316.517-.256.815.06.298.267.545.556.663.289.118.618.093.882-.067.264-.16.438-.429.467-.723.029-.294-.087-.585-.312-.782-.225-.197-.534-.277-.831-.215-.297.062-.544.25-.664.516-.12.266-.098.572.059.821.157.249.431.397.734.397.076 0 .153-.01.229-.03.303-.081.547-.291.656-.563.109-.272.073-.578-.096-.821-.169-.243-.45-.379-.753-.365-.303.014-.576.177-.731.438-.155.261-.169.58-.037.854.132.274.387.464.683.51.05.008.1.012.15.012.246 0 .484-.093.664-.26.18-.167.279-.402.273-.647-.006-.245-.118-.474-.31-.63-.192-.156-.445-.226-.696-.192-.502.068-.897.439-.993.931-.096.492.123.992.551 1.258.428.266.974.269 1.405.008.431-.261.666-.75.592-1.238-.074-.488-.444-.888-.931-.1007-.487-.119-1.002.059-1.298.448-.296.389-.328.918-.081 1.334.247.416.719.646 1.189.58.47-.066.857-.384 1.008-.802.151-.418.069-.884-.207-1.173z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">Java</span>
+                    <span class="skill-badge">OOP</span>
+                  </div>
+                  <span class="skill-focus">Object-Oriented Programming &amp; Architecture</span>
+                </div>
+              </div>
+
+              <!-- C -->
+              <div class="skill-item">
+                <div class="skill-icon-box">
+                  <span class="skill-text-icon">C</span>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">C</span>
+                    <span class="skill-badge">Foundational</span>
+                  </div>
+                  <span class="skill-focus">System Fundamentals &amp; Memory Management</span>
+                </div>
+              </div>
+
+              <!-- C++ -->
+              <div class="skill-item">
+                <div class="skill-icon-box">
+                  <span class="skill-text-icon">C++</span>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">C++</span>
+                    <span class="skill-badge">Performance</span>
+                  </div>
+                  <span class="skill-focus">Data Structures &amp; High-Efficiency Compute</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Web Development -->
+          <div class="skill-category-card reveal" data-tilt>
+            <div class="category-header">
+              <div class="category-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Web Development</h3>
+                <p class="category-desc">Modern responsive web stack</p>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <!-- HTML5 -->
+              <div class="skill-item">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.24-2.722H5.378l.707 8.156h8.847l-.299 3.256-2.656.719-2.652-.719-.17-1.906H6.862l.332 3.844 4.783 1.328 4.792-1.328.654-7.313H8.531z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">HTML5</span>
+                    <span class="skill-badge">Semantic</span>
+                  </div>
+                  <span class="skill-focus">Accessible Structuring, SEO &amp; Standards</span>
+                </div>
+              </div>
+
+              <!-- CSS3 -->
+              <div class="skill-item">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.235 2.721h10.364l-.242 2.719H5.884l.243 2.722h9.756l-.508 5.485-3.4 1.05-3.395-1.05-.218-2.449H6.064l.43 4.835 5.483 1.696 5.474-1.696 1.139-12.784v-.664z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">CSS3</span>
+                    <span class="skill-badge">Styling</span>
+                  </div>
+                  <span class="skill-focus">Flexbox, CSS Grid, Glassmorphism &amp; Animation</span>
+                </div>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="skill-item">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-.828-.242-.24-.287-.512-.287-.792 0-.435.347-.84 1.157-.84.721 0 1.25.285 1.592.825.215.345.317.51.587.51.345 0 .585-.24.585-.63 0-.465-.45-1.125-1.17-1.44-.72-.315-1.635-.405-2.445-.405-1.11 0-2.145.33-2.835.975-.69.645-1.035 1.53-1.035 2.475 0 .99.345 1.83 1.035 2.445.69.615 1.62.915 2.76 1.275.9.285 1.485.495 1.77.75.285.255.435.615.435 1.035 0 .615-.465 1.155-1.41 1.155-1.065 0-1.74-.48-2.19-1.29-.195-.36-.405-.48-.69-.48-.345 0-.6.255-.6.6 0 .39.3 1.08.975 1.665.675.585 1.65.885 2.775.885 1.29 0 2.4-.375 3.165-1.065.765-.69 1.17-1.665 1.17-2.73 0-.075 0-.15-.015-.225zm-9.39-4.815h-1.59v6.855c0 1.365-.42 2.37-1.245 3.015-.825.645-1.98.975-3.465.975-.825 0-1.635-.12-2.43-.375-.36-.12-.6-.39-.6-.735 0-.42.33-.705.735-.705.15 0 .3.045.45.09.585.18 1.185.27 1.815.27 1.05 0 1.815-.225 2.295-.69.48-.465.72-1.17.72-2.13v-6.57H5.509v-1.47h7.135v1.47z"/>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-badge">ES6+</span>
+                  </div>
+                  <span class="skill-focus">DOM Interaction, Event Handling &amp; Async APIs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Design & Prototyping -->
+          <div class="skill-category-card reveal" data-tilt>
+            <div class="category-header">
+              <div class="category-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Design &amp; Creative</h3>
+                <p class="category-desc">Interface aesthetics &amp; branding</p>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <!-- UI/UX Design -->
+              <div class="skill-item">
+                <div class="skill-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">UI/UX Design</span>
+                    <span class="skill-badge">Human-Centric</span>
+                  </div>
+                  <span class="skill-focus">Wireframing, Visual Hierarchy &amp; User Flows</span>
+                </div>
+              </div>
+
+              <!-- Canva -->
+              <div class="skill-item">
+                <div class="skill-icon-box">
+                  <span class="skill-text-icon">Ca</span>
+                </div>
+                <div class="skill-info">
+                  <div class="skill-name-row">
+                    <span class="skill-name">Canva</span>
+                    <span class="skill-badge">Visual Collateral</span>
+                  </div>
+                  <span class="skill-focus">Digital Graphics, Brand Identity &amp; Presentations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         STAGE 5: PROJECTS SHOWCASE SECTION
+         ====================================================================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <span class="section-tag">
+            <span class="brand-dot" aria-hidden="true"></span>
+            03 // Portfolio Showcase
+          </span>
+          <h2 class="section-title">
+            Featured Projects &amp; <span class="gradient-text">Creative Explorations</span>
+          </h2>
+          <p class="section-subtitle">
+            Curated web applications and interface design systems. Clearly marked sample placeholders ready to be updated with your real completed work.
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project Card 1: Web Application -->
+          <article class="project-card reveal">
+            <div class="project-media-wrap">
+              <img 
+                src="assets/images/project-1-placeholder.svg" 
+                alt="Featured Project 1 Placeholder - Modern Interactive Web Experience" 
+                class="project-image"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
+              <div class="project-category-overlay">
+                <span class="project-pill">Web Application</span>
+                <span class="project-pill pill-muted">[Placeholder 01]</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-number">01</span>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Responsive UI</span>
+                </div>
+              </div>
+
+              <h3 class="project-title">
+                <a href="#" class="project-title-link">Modern Interactive Web Application</a>
+              </h3>
+
+              <p class="project-description">
+                A responsive single-page web application featuring dynamic state management, accessible UI components, custom micro-interactions, and high-performance vanilla JavaScript architecture.
+              </p>
+
+              <div class="project-actions">
+                <a href="#" class="btn-project-primary" title="View Live Demo (Placeholder)">
+                  <span>Live Demo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+
+                <a href="https://github.com/namithanp-glitch" target="_blank" rel="noopener noreferrer" class="btn-project-ghost" title="View GitHub Code Repository">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2: UI/UX Design System -->
+          <article class="project-card reveal">
+            <div class="project-media-wrap">
+              <img 
+                src="assets/images/project-2-placeholder.svg" 
+                alt="Featured Project 2 Placeholder - Luxury Interface & Design System" 
+                class="project-image"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
+              <div class="project-category-overlay">
+                <span class="project-pill">UI/UX Design</span>
+                <span class="project-pill pill-muted">[Placeholder 02]</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-number">02</span>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">UI/UX Design</span>
+                  <span class="tech-tag">Wireframing</span>
+                  <span class="tech-tag">Canva</span>
+                  <span class="tech-tag">Design Systems</span>
+                </div>
+              </div>
+
+              <h3 class="project-title">
+                <a href="#" class="project-title-link">Luxury Interface &amp; Design System</a>
+              </h3>
+
+              <p class="project-description">
+                A human-centered digital design system exploring editorial typography scales, accessible dark/light color palettes, wireframe user flows, and aesthetic prototypes.
+              </p>
+
+              <div class="project-actions">
+                <a href="#" class="btn-project-primary" title="View Live Prototype (Placeholder)">
+                  <span>Live Prototype</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+
+                <a href="https://github.com/namithanp-glitch" target="_blank" rel="noopener noreferrer" class="btn-project-ghost" title="View Case Study / Assets">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  <span>Case Study</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3: Algorithm Visualizer -->
+          <article class="project-card reveal">
+            <div class="project-media-wrap">
+              <img 
+                src="assets/images/project-3-placeholder.svg" 
+                alt="Featured Project 3 Placeholder - Algorithms & Data Visualizer" 
+                class="project-image"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
+              <div class="project-category-overlay">
+                <span class="project-pill">Algorithms &amp; Web</span>
+                <span class="project-pill pill-muted">[Placeholder 03]</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-row">
+                <span class="project-number">03</span>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Algorithms</span>
+                  <span class="tech-tag">CSS Animations</span>
+                </div>
+              </div>
+
+              <h3 class="project-title">
+                <a href="#" class="project-title-link">Algorithms &amp; Logic Visualizer</a>
+              </h3>
+
+              <p class="project-description">
+                An interactive computer science visualization tool animating sorting routines and graph traversals in real-time, translating algorithmic complexity into engaging visual feedback.
+              </p>
+
+              <div class="project-actions">
+                <a href="#" class="btn-project-primary" title="Launch Visualizer App (Placeholder)">
+                  <span>Live App</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+
+                <a href="https://github.com/namithanp-glitch" target="_blank" rel="noopener noreferrer" class="btn-project-ghost" title="View Source Code on GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Mentorship Customization Callout -->
+        <div class="project-mentor-callout reveal">
+          <div class="callout-icon" aria-hidden="true">💡</div>
+          <div class="callout-content">
+            <h4>Mentor Quick-Guide: Replacing Sample Projects with Real Work</h4>
+            <p>
+              When your actual projects are ready, simply open <code>index.html</code> in the <code>#projects</code> section. Update the <code>&lt;img src="..."&gt;</code> path with your screenshot in <code>assets/images/</code>, adjust the title, description, and paste your active GitHub repository and Live Demo URLs!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         STAGE 5: EDUCATION AND EXPERIENCE SECTION
+         ====================================================================== -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <span class="section-tag">
+            <span class="brand-dot" aria-hidden="true"></span>
+            04 // Journey &amp; Milestones
+          </span>
+          <h2 class="section-title">
+            Education &amp; <span class="gradient-text">Experience Timeline</span>
+          </h2>
+          <p class="section-subtitle">
+            My formal computer science curriculum alongside structured milestones for upcoming internships and technical experience.
+          </p>
+        </div>
+
+        <!-- Dual Column Journey Grid -->
+        <div class="journey-grid">
+          
+          <!-- Column 1: Education Track -->
+          <div class="journey-column reveal">
+            <div class="column-header">
+              <div class="column-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="column-title">Education</h3>
+                <p class="column-desc">Formal Academic Degree</p>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper">
+              <!-- Timeline Item 1: B.E. Computer Science -->
+              <div class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta">
+                    <span class="timeline-year">2025-2029 — Present (Undergraduate)</span>
+                    <span class="timeline-status-badge">In Progress</span>
+                  </div>
+                  
+                  <h4 class="timeline-title">Bachelor of Engineering (B.E.)</h4>
+                  <h5 class="timeline-subtitle">Computer Science and Engineering</h5>
+                  <p class="timeline-org">[Jerusalem College of Engineering -chennai]</p>
+                  
+                  <p class="timeline-text">
+                    Comprehensive computer science undergraduate program building rigorous problem-solving fundamentals, algorithmic efficiency, and full-stack software development competencies.
+                  </p>
+
+                  <div class="coursework-container">
+                    <span class="coursework-label">Core Coursework Highlights:</span>
+                    <div class="coursework-tags">
+                      <span class="course-chip">Data Structures &amp; Algorithms</span>
+                      <span class="course-chip">Object-Oriented Programming (Java/C++)</span>
+                      <span class="course-chip">Database Management Systems (DBMS)</span>
+                      <span class="course-chip">Web Technologies &amp; Architecture</span>
+                      <span class="course-chip">Operating Systems &amp; Networks</span>
+                    </div>
+                  </div>
+
+                  <div class="timeline-placeholder-note">
+                    <span>[ Note: Add your exact college name, current CGPA, or academic honors here ]</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Timeline Item 2: Higher Secondary Education -->
+              <div class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta">
+                    <span class="timeline-year">Completed</span>
+                    <span class="timeline-status-badge badge-neutral">Pre-University</span>
+                  </div>
+                  
+                  <h4 class="timeline-title">Higher Secondary Education</h4>
+                  <h5 class="timeline-subtitle">Science &amp; Mathematics Stream</h5>
+                  <p class="timeline-org">[Government Higher Secondary school-Kokkalur / Thiruvangoor Higher Secondary school]</p>
+                  
+                  <p class="timeline-text">
+                    Established strong analytical grounding in advanced mathematics, analytical reasoning, and early programming principles.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Professional Experience Track -->
+          <div class="journey-column reveal">
+            <div class="column-header">
+              <div class="column-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="column-title">Experience &amp; Training</h3>
+                <p class="column-desc">Industry &amp; Practical Milestones</p>
+              </div>
+            </div>
+
+            <!-- Internship Opportunity Banner -->
+            <div class="internship-open-banner">
+              <div class="banner-pulse-dot" aria-hidden="true"></div>
+              <div>
+                <strong>Seeking Internship Opportunities</strong>
+                <p>Available for Frontend Development &amp; Software Engineering Internships</p>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper">
+              <!-- Timeline Item 1: Internship Placeholder -->
+              <div class="timeline-item">
+                <div class="timeline-marker marker-accent" aria-hidden="true"></div>
+                <div class="timeline-card card-placeholder">
+                  <div class="timeline-meta">
+                    <span class="timeline-year">[Upcoming / Future 202X]</span>
+                    <span class="timeline-status-badge badge-accent">Target Milestone</span>
+                  </div>
+                  
+                  <h4 class="timeline-title">[Frontend Developer Intern / Software Trainee]</h4>
+                  <h5 class="timeline-subtitle">[Company / Tech Organization Placeholder]</h5>
+                  <p class="timeline-org">[Location : Pallavaram Chennai]</p>
+                  
+                  <p class="timeline-text">
+                    Reserved placeholder for your upcoming industry internship. Once you secure an internship, replace this card with your responsibilities, key features delivered, and technical contributions.
+                  </p>
+
+                  <div class="coursework-container">
+                    <span class="coursework-label">Planned Impact Areas:</span>
+                    <div class="coursework-tags">
+                      <span class="course-chip">Component Development</span>
+                      <span class="course-chip">Responsive Web Testing</span>
+                      <span class="course-chip">Git / Agile Collaboration</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Timeline Item 2: Technical Workshops & Hands-on Practice -->
+              <div class="timeline-item">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta">
+                    <span class="timeline-year">Ongoing Practice</span>
+                    <span class="timeline-status-badge">Active Learning</span>
+                  </div>
+                  
+                  <h4 class="timeline-title">Technical Workshops &amp; Coding Labs</h4>
+                  <h5 class="timeline-subtitle">Independent Study &amp; Campus Tech Events</h5>
+                  <p class="timeline-org">Continuous Learning Practice</p>
+                  
+                  <p class="timeline-text">
+                    Dedicated to active self-driven learning: participating in online coding bootcamps, technical webinars, UI/UX design challenges, and open-source explorations to reinforce modern web standards.
+                  </p>
+
+                  <div class="coursework-container">
+                    <span class="coursework-label">Practical Competencies:</span>
+                    <div class="coursework-tags">
+                      <span class="course-chip">Clean Code Architecture</span>
+                      <span class="course-chip">Modern JavaScript ES6+</span>
+                      <span class="course-chip">Figma &amp; Canva Prototyping</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         STAGE 6: CONTACT SECTION
+         ====================================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <span class="section-tag">
+            <span class="brand-dot" aria-hidden="true"></span>
+            05 // Initiate Dialogue
+          </span>
+          <h2 class="section-title">
+            Let's Connect &amp; <span class="gradient-text">Collaborate</span>
+          </h2>
+          <p class="section-subtitle">
+            Interested in discussing an internship, frontend opportunity, or UI/UX project? Drop a message below or connect directly through my professional channels.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left Column: Direct Communication Channels -->
+          <div class="contact-info-col reveal">
+            <div class="contact-card">
+              <h3 class="contact-card-title">Direct Inquiries</h3>
+              <p class="contact-card-text">
+                I am actively seeking software engineering internships and collaborative frontend opportunities. Feel free to reach out directly via email or connect on LinkedIn and GitHub.
+              </p>
+
+              <div class="contact-channels-list">
+                <!-- Channel 1: Email -->
+                <div class="channel-item">
+                  <div class="channel-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-label">Email Address</span>
+                    <a href="mailto:namithanp36@gmail.com" class="channel-link" id="email-address-text">namithanp36@gmail.com</a>
+                  </div>
+                  <button type="button" class="btn-copy-email" id="btn-copy-email" title="Copy email address to clipboard" aria-label="Copy email address to clipboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span class="copy-tooltip" id="copy-tooltip">Copy</span>
+                  </button>
+                </div>
+
+                <!-- Channel 2: LinkedIn -->
+                <div class="channel-item">
+                  <div class="channel-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/namitha-n-p-130068391?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="channel-link">linkedin.com/in/namitha-n-p-130068391</a>
+                  </div>
+                </div>
+
+                <!-- Channel 3: GitHub -->
+                <div class="channel-item">
+                  <div class="channel-icon-box" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-label">GitHub</span>
+                    <a href="https://github.com/namithanp-glitch" target="_blank" rel="noopener noreferrer" class="channel-link">github.com/namithanp-glitch</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Location & Response Time Meta -->
+              <div class="contact-meta-box">
+                <div class="meta-item">
+                  <span class="meta-dot" aria-hidden="true"></span>
+                  <span><strong>Status:</strong> Actively reviewing internship roles</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-clock" aria-hidden="true">⏱️</span>
+                  <span><strong>Typical Response:</strong> Within 24-48 business hours</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Backend Configuration Guide Callout -->
+            <div class="backend-guide-box">
+              <div class="guide-header">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Direct Message Routing</span>
+              </div>
+              <p>
+                Inquiries submitted through the contact form are dispatched securely to <code>namithanp36@gmail.com</code> with instant client mailto fallback.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Luxury Contact Form -->
+          <div class="contact-form-col reveal">
+            <div class="contact-form-card">
+              <h3 class="form-card-title">Send a Direct Message</h3>
+              <p class="form-card-subtitle">Fill in the details below to start a conversation.</p>
+
+              <!-- Form Element -->
+              <form id="contact-form" class="luxury-form" novalidate>
+                
+                <!-- Name Field -->
+                <div class="form-group" id="group-name">
+                  <label for="contact-name" class="form-label">
+                    <span>Full Name</span>
+                    <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-wrap">
+                    <input 
+                      type="text" 
+                      id="contact-name" 
+                      name="name" 
+                      class="form-control" 
+                      placeholder="e.g. Jane Doe"
+                      required
+                      autocomplete="name"
+                      aria-required="true"
+                    >
+                    <span class="input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </span>
+                  </div>
+                  <span class="field-error-msg" id="error-name" aria-live="polite"></span>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group" id="group-email">
+                  <label for="contact-email" class="form-label">
+                    <span>Email Address</span>
+                    <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-wrap">
+                    <input 
+                      type="email" 
+                      id="contact-email" 
+                      name="email" 
+                      class="form-control" 
+                      placeholder="e.g. jane@company.com"
+                      required
+                      autocomplete="email"
+                      aria-required="true"
+                    >
+                    <span class="input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </span>
+                  </div>
+                  <span class="field-error-msg" id="error-email" aria-live="polite"></span>
+                </div>
+
+                <!-- Subject Field -->
+                <div class="form-group" id="group-subject">
+                  <label for="contact-subject" class="form-label">
+                    <span>Subject</span>
+                    <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-wrap">
+                    <input 
+                      type="text" 
+                      id="contact-subject" 
+                      name="subject" 
+                      class="form-control" 
+                      placeholder="e.g. Frontend Internship Opportunity"
+                      required
+                      aria-required="true"
+                    >
+                    <span class="input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                    </span>
+                  </div>
+                  <span class="field-error-msg" id="error-subject" aria-live="polite"></span>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group" id="group-message">
+                  <label for="contact-message" class="form-label">
+                    <span>Your Message</span>
+                    <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="input-wrap">
+                    <textarea 
+                      id="contact-message" 
+                      name="message" 
+                      rows="5" 
+                      class="form-control form-textarea" 
+                      placeholder="Share details about the role, project, or question..."
+                      required
+                      aria-required="true"
+                    ></textarea>
+                  </div>
+                  <span class="field-error-msg" id="error-message" aria-live="polite"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="form-submit-btn" class="btn-submit">
+                  <span class="btn-text">Send Message</span>
+                  <svg class="btn-send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+
+                <!-- Dynamic Form Status Alert Box (Genuinely Honest Feedback) -->
+                <div id="form-status" class="form-status-alert" role="status" aria-live="assertive"></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       STAGE 6: LUXURY FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      
+      <!-- Top Row: Brand & Quick Links & Socials -->
+      <div class="footer-top-row">
+        <!-- Brand Info -->
+        <div class="footer-brand-wrap">
+          <a href="#hero" class="footer-brand" aria-label="Namitha NP Portfolio">
+            <span>Namitha NP</span>
+            <span class="brand-dot" aria-hidden="true"></span>
+          </a>
+          <p class="footer-tagline">
+            Frontend Developer &amp; UI/UX Designer
+          </p>
+          <p class="footer-degree">
+            B.E. Computer Science and Engineering Undergraduate
+          </p>
+          <p class="footer-email-row">
+            <span class="footer-email-label">Email:</span>
+            <a href="mailto:namithanp36@gmail.com" class="footer-email-link">namithanp36@gmail.com</a>
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-nav-wrap">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Me</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#education" class="footer-link">Education &amp; Experience</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Channels -->
+        <div class="footer-social-wrap">
+          <h4 class="footer-col-title">Connect</h4>
+          <div class="footer-social-icons">
+            <a href="https://github.com/namithanp-glitch" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile" title="GitHub">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/namitha-n-p-130068391?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="mailto:namithanp36@gmail.com" class="social-icon-link" aria-label="Email Namitha NP" title="Email">
+              <svg viewBox="0 0 24 24">
+                <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l9.518 7.714 9.518-7.714v11.817h-19.036z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="footer-resume-link">
+            <a href="assets/resume/Namitha_NP_Resume(1).pdf" download="Namitha_NP_Resume.pdf" class="btn-footer-resume">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume PDF</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Row: Copyright & Back to Top -->
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          &copy; 2026 Namitha NP. Crafted with luxury editorial aesthetics, clean HTML5, CSS3, &amp; vanilla JavaScript.
+        </p>
+
+        <!-- Back to Top Button -->
+        <a href="#hero" class="btn-back-to-top" id="back-to-top" aria-label="Back to top of page" title="Back to Top">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
